@@ -77,6 +77,7 @@ int append(struct lista *lista, int value) {
 }
 
 // Aggiunge un nuovo nodo nella lista in posizione index
+//! Da capire se funziona per tutti i casi
 int insert(struct lista *lista, int value, int index) {
     if (lista->head == NULL && index != 0) {
         printf("Non puoi inserire un elemento con index diverso da 0 in una lista vuota\n");
@@ -96,7 +97,6 @@ int insert(struct lista *lista, int value, int index) {
         head = head->next;
     }
 
-    // Da capire meglio
     if (head == NULL) {
         printf("Index fuori dai limiti della lista\n");
         distruggi_nodo(new_node);
